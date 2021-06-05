@@ -2,6 +2,9 @@ lockfileVersion: 5.3
 
 importers:
 
+  .:
+    specifiers: {}
+
   core_app:
     specifiers:
       '@babel/core': ^7.14.3
@@ -34,6 +37,37 @@ importers:
       '@babel/preset-typescript': 7.13.0_@babel+core@7.14.3
       '@types/node': 15.12.1
       '@types/pino': 6.3.8
+      '@typescript-eslint/eslint-plugin': 4.26.0_20402444dce539b9a5aa61b9d15feae1
+      '@typescript-eslint/parser': 4.26.0_eslint@7.28.0+typescript@4.3.2
+      eslint: 7.28.0
+      eslint-config-prettier: 8.3.0_eslint@7.28.0
+      eslint-plugin-prettier: 3.4.0_568445eda90a1e3353ad3d11dae64fa4
+      prettier: 2.3.0
+      ts-jest: 27.0.2_typescript@4.3.2
+      typescript: 4.3.2
+
+  local_server:
+    specifiers:
+      '@babel/core': ^7.14.3
+      '@babel/preset-env': ^7.14.4
+      '@babel/preset-typescript': ^7.13.0
+      '@types/node': ^15.12.1
+      '@typescript-eslint/eslint-plugin': ^4.26.0
+      '@typescript-eslint/parser': ^4.26.0
+      core_app: 0.1.0
+      eslint: ^7.28.0
+      eslint-config-prettier: ^8.3.0
+      eslint-plugin-prettier: ^3.4.0
+      prettier: ^2.3.0
+      ts-jest: ^27.0.2
+      typescript: ^4.3.2
+    dependencies:
+      core_app: link:../core_app
+    devDependencies:
+      '@babel/core': 7.14.3
+      '@babel/preset-env': 7.14.4_@babel+core@7.14.3
+      '@babel/preset-typescript': 7.13.0_@babel+core@7.14.3
+      '@types/node': 15.12.1
       '@typescript-eslint/eslint-plugin': 4.26.0_20402444dce539b9a5aa61b9d15feae1
       '@typescript-eslint/parser': 4.26.0_eslint@7.28.0+typescript@4.3.2
       eslint: 7.28.0
