@@ -1,9 +1,9 @@
 import { FastInstanceResult } from '../app';
+import { hello } from '../controllers/hello';
 
 export function setupAllRoutes(fast: FastInstanceResult): FastInstanceResult {
-    fast.get('/', (request, reply) => {
-        reply.send({ hello: 'world' });
-    });
+    // TODO: change style
+    fast.get('/', { ...hello });
 
     return fast;
 }
