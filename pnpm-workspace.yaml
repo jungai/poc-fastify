@@ -1,0 +1,4 @@
+packages:
+  - 'core_app'
+  - 'local_server'
+  - 'test_e2e'
