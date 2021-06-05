@@ -15,23 +15,23 @@ const defaultFastifyOptions: FastifyServerOptions = {
     disableRequestLogging: true,
 };
 
-export function createFastify(options: FastifyServerOptions = defaultFastifyOptions) {
+function createFastify(options: FastifyServerOptions = defaultFastifyOptions) {
     return Fastify(options);
 }
 
-export function setupPrettyLogger(fast: FastInstanceResult): FastInstanceResult {
+function setupPrettyLogger(fast: FastInstanceResult): FastInstanceResult {
     fast.register(fastifyRequestLogger);
 
     return fast;
 }
 
-export function setupCors(fast: FastInstanceResult): FastInstanceResult {
+function setupCors(fast: FastInstanceResult): FastInstanceResult {
     fast.register(cors);
 
     return fast;
 }
 
-export function setupRateLimit(fast: FastInstanceResult): FastInstanceResult {
+function setupRateLimit(fast: FastInstanceResult): FastInstanceResult {
     // it will throw 429
     fast.register(rateLimit, {
         max: 10,
@@ -41,7 +41,7 @@ export function setupRateLimit(fast: FastInstanceResult): FastInstanceResult {
     return fast;
 }
 
-export function setupRoutes(fast: FastInstanceResult): FastInstanceResult {
+function setupRoutes(fast: FastInstanceResult): FastInstanceResult {
     setupAllRoutes(fast);
 
     return fast;
