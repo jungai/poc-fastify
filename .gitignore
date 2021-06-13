@@ -5,3 +5,5 @@ yarn-error.log
 packaged.yaml
 
 *.tsbuildinfo
+
+.pnpm-debug.log
